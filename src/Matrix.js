@@ -20,16 +20,12 @@ export default class Matrix extends Component {
     this.props.values.map((rowVals, idx) => <div key={idx} className="row">{this.genRow(rowVals)}</div>)
   )
 
-  getColor = () => (
-    this.state.selectedColor
-  )
-  
   setColor = (hex) => {
     this.setState({
       selectedColor: hex
     })
   }
- 
+
   render() {
     return (
       <div id="app">
@@ -47,6 +43,3 @@ Matrix.defaultProps = {
   values: chromeBoi
 }
 
-export var setColor = () => {
-  this.state.selectedColor = hex
-}
