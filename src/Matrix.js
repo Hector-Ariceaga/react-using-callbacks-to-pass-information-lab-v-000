@@ -23,7 +23,13 @@ export default class Matrix extends Component {
   getColor = () => (
     this.state.selectedColor
   )
-
+  
+  setColor = (hex) => {
+    this.setState({
+      selectedColor: hex
+    })
+  }
+ 
   render() {
     return (
       <div id="app">
